@@ -14,6 +14,7 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
+import java.awt.event.KeyEvent;
 
 
 public class OpenGeoPos implements Task {
@@ -29,23 +30,10 @@ public class OpenGeoPos implements Task {
         GeoPosWindow.updateLocalPos();
         actor.attemptsTo(
                 CleanRegister.deleteTheSessions(),
-                SwitchToWindow.withTitle("x0vncserver "),
-                WaitUntil.the(GeoPosWindow.LOCAL_POS, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds()
+                SwitchToWindow.withTitle("pos@alk33-03qa1 "),
+                WaitUntil.the(GeoPosWindow.LOCAL_POS, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
+                PerformWait.wait(3)
         );
-
-        actor.attemptsTo(
-                Click.on(GeoPosWindow.LOCAL_POS),
-                Enter.theValue(Keys.DOWN).into(GeoPosWindow.LOCAL_POS),
-                Enter.theValue(Keys.DOWN).into(GeoPosWindow.LOCAL_POS),
-                Enter.theValue(Keys.DOWN).into(GeoPosWindow.LOCAL_POS),
-                Enter.theValue(Keys.DOWN).into(GeoPosWindow.LOCAL_POS),
-                Enter.theValue(Keys.ENTER).into(GeoPosWindow.LOCAL_POS),
-                PerformWait.wait(60),
-                ValidateTextOnScreen.contains("Ingreso de Usuario"),
-                WaitLoad.load("Ingreso","Load","Login")
-
-        );
-
     }
     public static OpenGeoPos open(){
         return Tasks.instrumented(OpenGeoPos.class);

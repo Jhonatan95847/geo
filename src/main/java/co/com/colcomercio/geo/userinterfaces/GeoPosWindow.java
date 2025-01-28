@@ -20,7 +20,7 @@ public class GeoPosWindow extends PageObject {
 
     private static Target initLocalPos() {
         //String dynamicName = Serenity.sessionVariableCalled("host") + " (x0vncserver): RealVNC Viewer";
-        return Target.the("Window for billing pos").located(By.name("x0vncserver "));
+        return Target.the("Window for billing pos").located(By.name("pos@alk33-03qa1 "));
     }
 
     public static void updateLocalPos() {

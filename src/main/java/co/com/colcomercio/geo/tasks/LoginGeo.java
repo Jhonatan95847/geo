@@ -20,7 +20,7 @@ public class LoginGeo implements Task {
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
                 EscribirTextoConTeclado.elTexto("geocom"),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                PerformWait.wait(30)
+                PerformWait.wait(5)
         );
     }
     public static LoginGeo open(){

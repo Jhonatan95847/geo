@@ -96,6 +96,12 @@ dependencies {
     //Open CV
     implementation group: 'org.openpnp', name: 'opencv', version: '4.7.0-0'
 
+    //sftp
+    implementation 'com.jcraft:jsch:0.1.55'
+    // Dependencias de Log4j 2
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+
 }
 
 tasks.withType(Test).configureEach {

@@ -3,11 +3,20 @@
 Característica: Escenarios de caja
 
   @CotizacionCaja @estable @retests
-  Escenario:  Realizar cotizacion desde caja
-    Dado que un usuario ingresa a la caja y selecciona tipo de documento "<C>"
-    #Cuando ingresa el numero de ID del cliente y selecciona "<convenio>" convenio
-    #Y agrega "<n>" cantidad de productos de tipo "<kasados>"
-    #Y desea realizar el pago "<sin>" donacion con metodo de pago "<efectivo>" y juega la ruleta
+  Esquema del escenario:  Realizar cotizacion desde caja
+    Dado que un cliente "<cliente>" realiza una compra y selecciona documento "<tipo_id>"
+    Cuando selecciona "<convenio>" convenio y agrega el vendedor y el asesor
+    Y agrega "<cantidad>" productos de tipo "<kasados>"
+    Y desea realizar el pago "<donacion>" donacion con metodo de pago "<metodo_pago>"
     #Entonces deberia generarse la factura de pago
-    #Ejemplos:
-      #| documento | convenio | n | kasados | sin | efectivo |
+    Ejemplos:
+      | cliente    | tipo_id | convenio | cantidad | kasados | donacion | metodo_pago |
+      | registrado | CC      | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | CE      | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | NIT     | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | RUT     | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | TI      | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | NIUP    | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | PAS     | sin      | 3        | normal  | sin      | efectivo    |
+      #| registrado | PEP     | sin      | 3        | normal  | sin      | efectivo    |
+
