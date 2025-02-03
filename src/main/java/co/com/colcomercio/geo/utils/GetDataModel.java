@@ -1,6 +1,8 @@
 package co.com.colcomercio.geo.utils;
 
 
+import co.com.colcomercio.geo.models.productList.ProductList;
+import co.com.colcomercio.geo.models.users.Users;
 import co.com.colcomercio.geo.models.vnc.Vnc;
 
 import java.util.List;
@@ -15,4 +17,15 @@ public class GetDataModel {
         return data.stream().filter(t -> t.getKey().equals(key)).findFirst().get();
     }
 
+    public static ProductList productList(String key) {
+        List<ProductList> data = MyReader.ofInformationWith("src/test/resources/data/productList.json")
+                .andModel(ProductList.class);
+        return data.stream().filter(t -> t.getKey().equals(key)).findFirst().get();
+    }
+
+    public static Users users(String key) {
+        List<Users> data = MyReader.ofInformationWith("src/test/resources/data/users.json")
+                .andModel(Users.class);
+        return data.stream().filter(t -> t.getKey().equals(key)).findFirst().get();
+    }
 }

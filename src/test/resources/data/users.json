@@ -1,0 +1,74 @@
+[
+  {
+    "key" : "CC",
+    "dataUsers": {
+      "idUser" : "1049644471"
+    }
+  },
+  {
+    "key" : "NIT",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "Juridico Extranjero",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "RUT",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "TI",
+    "dataUsers": {
+      "idUser" : "95123011067"
+    }
+  },
+  {
+    "key" : "NIUP",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "CE",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "PAS",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "PEP",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "DE",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "NITPN",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  },
+  {
+    "key" : "PPT",
+    "dataUsers": {
+      "idUser" : "1049644474"
+    }
+  }
+]

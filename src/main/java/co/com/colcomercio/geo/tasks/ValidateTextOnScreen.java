@@ -1,5 +1,6 @@
 package co.com.colcomercio.geo.tasks;
 
+import co.com.colcomercio.geo.interactions.PerformWait;
 import co.com.colcomercio.geo.utils.ScreenCapture;
 import co.com.colcomercio.geo.utils.OCRProcessor;
 import net.serenitybdd.screenplay.Actor;
@@ -22,11 +23,15 @@ public class ValidateTextOnScreen implements Task {
     public <T extends Actor> void performAs(T actor) {
         try {
             // Captura de pantalla
-            File screenshot = ScreenCapture.captureScreen("screenshot.png");
-
+            File screenshot = ScreenCapture.captureWindow("pos@alk33-03qa1 ","screenshot.png");
+            actor.attemptsTo(
+                    PerformWait.wait(2)
+            );
             // Procesamiento con OCR
             String extractedText = OCRProcessor.extractTextFromImage(screenshot);
-
+            actor.attemptsTo(
+                    PerformWait.wait(2)
+            );
             // Validación
             if (!extractedText.contains(expectedText)) {
                 throw new AssertionError("Texto esperado no encontrado: " + expectedText);

@@ -1,5 +1,6 @@
 package co.com.colcomercio.geo.stepdefinitions;
 
+import co.com.colcomercio.geo.tasks.DownloadFileViaSFTP;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
 
@@ -8,7 +9,14 @@ public class SaleValidation {
     @Entonces("deberia generarse la factura de pago")
     public void deberiaGenerarseLaFacturaDePago(String n,String normal) {
         actorWindows.wasAbleTo(
-
+                DownloadFileViaSFTP.from(
+                        "sftp.servidor.com", // Host del servidor
+                        22,                 // Puerto
+                        "usuario",          // Usuario
+                        "contraseña",       // Contraseña
+                        "/ruta/remota",     // Ruta de la carpeta remota
+                        "C:\\ruta\\local"   // Ruta de la carpeta local
+                )
         );
     }
 }

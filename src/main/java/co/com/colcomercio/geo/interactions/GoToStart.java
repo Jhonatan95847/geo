@@ -26,7 +26,7 @@ public class GoToStart implements Task {
     public <T extends Actor> void performAs(T actor) {
         try {
             // Captura de pantalla
-            File screenshot = ScreenCapture.captureScreen("screenshot.png");
+            File screenshot = ScreenCapture.captureWindow("pos@alk33-03qa1 ","screenshot.png");
 
             // Procesamiento con OCR
             String extractedText = OCRProcessor.extractTextFromImage(screenshot);
@@ -35,38 +35,49 @@ public class GoToStart implements Task {
                     PerformWait.wait(3)
             );
             // Validación
-            if (extractedText.contains("Ingrese el nro")||extractedText.contains("Cliente registrado")||extractedText.contains("Cliente con")) {
+            if (extractedText.contains("Ingrese el nro")||extractedText.contains("Cliente Registrado")||extractedText.contains("Cliente con")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE)
                 );
             } else if (extractedText.contains("Seleccione un Convenio")||extractedText.contains("Desea realizar una donacion")||extractedText.contains("Ingrese el monto")){
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_S)
                 );
-            } else if (extractedText.contains("Vendedor")||extractedText.contains("Aseso")||extractedText.contains("Forma de pago")) {
+            } else if (extractedText.contains("nde")||extractedText.contains("seso")||extractedText.contains("Forma de Pago")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
-                        PresionarTecla.conCodigo(KeyEvent.VK_S)
+                        PerformWait.wait(2),
+                        PresionarTecla.conCodigo(KeyEvent.VK_S),
+                        PerformWait.wait(2)
                 );
             } else if (extractedText.contains("Ingrese el articulo")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_S)
                 );
-            } else if (extractedText.contains("Vendedor asignado")||extractedText.contains("Asesor asignado")) {
+            } else if (extractedText.contains("Asignado")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_S)
                 );
             } else if (extractedText.contains("Confirma la venta")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_S),
+                        PerformWait.wait(2),
                         PresionarTecla.conCodigo(KeyEvent.VK_ENTER)
                 );
             } else if (extractedText.contains("Datos del cliente")) {
