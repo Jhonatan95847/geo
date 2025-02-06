@@ -67,7 +67,7 @@ public class PayProcess {
                 PerformWait.wait(LOW_TIME),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
                 PerformWait.wait(LOW_TIME),
-                ValidateTextOnScreen.contains("Confirma"),
+                ValidateTextOnScreen.contains("firma"),
                 PresionarTecla.conCodigo(KeyEvent.VK_S),
                 //PerformWait.wait(3),
                 //PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),

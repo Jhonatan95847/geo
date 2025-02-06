@@ -1,12 +1,9 @@
 package co.com.colcomercio.geo.stepdefinitions;
 
-import co.com.colcomercio.geo.interactions.PerformWait;
-import co.com.colcomercio.geo.interactions.PresionarTecla;
+
 import co.com.colcomercio.geo.tasks.AddVendedorAsesor;
 import io.cucumber.java.es.Dado;
 import net.serenitybdd.screenplay.Actor;
-
-import java.awt.event.KeyEvent;
 
 public class SalesProcess {
     private final Actor actorWindows = Actor.named("Actor windows") ;
@@ -18,4 +15,6 @@ public class SalesProcess {
 
 
     }
+
+
 }

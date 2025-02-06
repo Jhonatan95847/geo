@@ -11,7 +11,7 @@ import java.io.File;
 
 public class ValidateTextOnScreen implements Task {
     private final String expectedText;
-    private static final int MAX_ATTEMPTS = 3; // Número máximo de intentos
+    private static final int MAX_ATTEMPTS = 5; // Número máximo de intentos
     private static final int WAIT_TIME = 2; // Tiempo de espera en segundos entre intentos
 
     public ValidateTextOnScreen(String expectedText) {

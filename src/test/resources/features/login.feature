@@ -8,10 +8,10 @@ Característica: Escenarios de caja
     Cuando selecciona "<convenio>" convenio y agrega el vendedor y el asesor
     Y agrega "<cantidad>" productos de tipo "<producto>"
     Y desea realizar el pago "<donacion>" donacion con metodo de pago "<metodo_pago>"
-    #Entonces deberia generarse la factura de pago
+    Entonces deberia generarse la factura de pago
     Ejemplos:
       | cliente    | tipo_id | convenio | cantidad | producto | donacion | metodo_pago |
-      | registrado | PPT     | sin      | 3        | normal  | sin      | efectivo    |
+      | registrado | PPT     | sin      | 3        | normal   | sin      | efectivo    |
       | registrado | NIT     | sin      | 3        | normal  | sin      | efectivo    |
       | registrado | CC      | sin      | 3        | normal  | sin      | efectivo    |
       | registrado | PAS     | sin      | 3        | normal  | sin      | efectivo    |
