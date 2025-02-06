@@ -73,6 +73,11 @@ public class SelectID implements Interaction {
                         EscribirTextoConTeclado.elTexto("11")
                 );
                 break;
+                case "PPT":
+                actor.attemptsTo(
+                        EscribirTextoConTeclado.elTexto("12")
+                );
+                break;
         }
     }
     public static SelectID select(String id){

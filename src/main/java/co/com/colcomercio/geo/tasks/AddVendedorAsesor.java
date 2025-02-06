@@ -9,6 +9,8 @@ import net.serenitybdd.screenplay.Tasks;
 
 import java.awt.event.KeyEvent;
 
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
+
 public class AddVendedorAsesor implements Task {
 
     private final String convenio;
@@ -21,29 +23,31 @@ public class AddVendedorAsesor implements Task {
     public <T extends Actor> void performAs(T actor) {
         if (convenio.equals("sin")){
             actor.attemptsTo(
-                    PerformWait.wait(2),
                     EscribirTextoConTeclado.elTexto("s"),
-                    PerformWait.wait(2),
-                    ValidateTextOnScreen.contains("Seleccione un Convenio"),
+                    ValidateTextOnScreen.contains("Seleccione"), // Seleccione un Convenio
                     PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE)
             );
         } else if (convenio.equals("con")) {
             actor.attemptsTo(
-                    PerformWait.wait(2),
                     EscribirTextoConTeclado.elTexto("s"),
-                    PerformWait.wait(2),
-                    ValidateTextOnScreen.contains("Seleccione un Convenio"),
+                    ValidateTextOnScreen.contains("Seleccione"),
                     PresionarTecla.conCodigo(KeyEvent.VK_ASTERISK)
+            );
+        } else if (convenio.equals("NA")) {
+            actor.attemptsTo(
+                    EscribirTextoConTeclado.elTexto("s")
+                    //ValidateTextOnScreen.contains("Seleccione un Convenio"),
+                    //PresionarTecla.conCodigo(KeyEvent.VK_ASTERISK)
             );
         }
         actor.wasAbleTo(
-                PerformWait.wait(2),
-                ValidateTextOnScreen.contains("nde"),
+                ValidateTextOnScreen.contains("ende"), // vendedor
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
+                ValidateTextOnScreen.contains("ende"),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                PerformWait.wait(2),
-                ValidateTextOnScreen.contains("seso"),
+                ValidateTextOnScreen.contains("eso"),  //Asesor
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
+                ValidateTextOnScreen.contains("eso"),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER)
         );
     }

@@ -7,10 +7,17 @@ import net.serenitybdd.screenplay.Actor;
 
 import java.awt.event.KeyEvent;
 
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
+import static co.com.colcomercio.geo.utils.WaitingTime.MEDIUM_TIME;
+
 public class PayProcess {
     private final Actor actorWindows = Actor.named("Actor windows") ;
     @Y("desea realizar el pago {string} donacion con metodo de pago {string}")
     public void     deseaRealizarElPagoDonacionConMetodoDePago(String donacion,String payMethod) {
+       actorWindows.wasAbleTo(
+               ValidateTextOnScreen.contains("donacion"),
+               PerformWait.wait(LOW_TIME)
+       );
         if (donacion.equals("sin")){
             actorWindows.wasAbleTo(
                     PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE)
@@ -21,7 +28,6 @@ public class PayProcess {
             );
         }
         actorWindows.wasAbleTo(
-                PerformWait.wait(3),
                 ValidateTextOnScreen.contains("Forma de Pago")
         );
         if (payMethod.equals("efectivo")){
@@ -55,18 +61,20 @@ public class PayProcess {
         }
         actorWindows.wasAbleTo(
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                PerformWait.wait(2),
-                //ValidateTextOnScreen.contains("Ingrese el monto"),
-                EscribirTextoConTeclado.elTexto("2000000"),
-                PerformWait.wait(2),
+                PerformWait.wait(MEDIUM_TIME),
+                //ValidateTextOnScreen.contains("Ingrese"),
+                EscribirTextoConTeclado.elTexto("1000000"),
+                PerformWait.wait(LOW_TIME),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                PerformWait.wait(3),
-                ValidateTextOnScreen.contains("Con"),
+                PerformWait.wait(LOW_TIME),
+                ValidateTextOnScreen.contains("Confirma"),
                 PresionarTecla.conCodigo(KeyEvent.VK_S),
-                PerformWait.wait(10),
-                ValidateTextOnScreen.contains("tipo"),
+                //PerformWait.wait(3),
+                //PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                PerformWait.wait(MEDIUM_TIME),
+                ValidateTextOnScreen.contains("Impre"),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                PerformWait.wait(1)
+                PerformWait.wait(LOW_TIME)
                 //CloseWindow.withTitle("pos@alk33-03qa1 ")
         );
     }

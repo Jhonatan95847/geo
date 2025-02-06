@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.awt.event.KeyEvent;
 
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
 
 
 public class AddCliente implements Task {
@@ -27,10 +28,9 @@ public class AddCliente implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 SelectID.select(id),
-                PerformWait.wait(1),
-                PresionarTecla.conCodigo(KeyEvent.VK_ENTER)
-                //PerformWait.wait(2),
-                //ValidateTextOnScreen.contains("Ingrese")
+                PerformWait.wait(LOW_TIME),
+                PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
+                ValidateTextOnScreen.contains("Ingrese")  //Ingrese el nro. de cliente
         );
         logger.info("agregando numero de id");
 

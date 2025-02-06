@@ -7,12 +7,13 @@ import net.serenitybdd.screenplay.Tasks;
 
 import java.awt.event.KeyEvent;
 
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
+
 public class AddProduct implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                PerformWait.wait(5),
-                ValidateTextOnScreen.contains("Ingrese el articulo"),
+                ValidateTextOnScreen.contains("articulo"),
                 EscribirTextoConTeclado.elTexto("8806098432516"),
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
                 EscribirTextoConTeclado.elTexto("7701023185240"),
@@ -24,8 +25,7 @@ public class AddProduct implements Interaction {
                 PerformWait.wait(2),
                 //ValidateTextOnScreen.contains("Registrados 4"),
                 PresionarTecla.conCodigo(KeyEvent.VK_F9),
-                PerformWait.wait(3),
-                ValidateTextOnScreen.contains("donacion")
+                PerformWait.wait(LOW_TIME)
         );
     }
     public static AddProduct agregate(){

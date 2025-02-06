@@ -15,6 +15,8 @@ import org.openqa.selenium.Keys;
 import java.awt.event.KeyEvent;
 import java.io.File;
 
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
+
 public class GoToStart implements Task {
 
 
@@ -32,52 +34,47 @@ public class GoToStart implements Task {
             String extractedText = OCRProcessor.extractTextFromImage(screenshot);
 
             actor.attemptsTo(
-                    PerformWait.wait(3)
+                    PerformWait.wait(LOW_TIME)
             );
             // Validación
             if (extractedText.contains("Ingrese el nro")||extractedText.contains("Cliente Registrado")||extractedText.contains("Cliente con")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE)
                 );
-            } else if (extractedText.contains("Seleccione un Convenio")||extractedText.contains("Desea realizar una donacion")||extractedText.contains("Ingrese el monto")){
+            } else if (extractedText.contains("Seleccione un Convenio")||extractedText.contains("Desea realizar una donacion")||extractedText.contains("Ingrese el monto")||extractedText.contains("Error")||extractedText.contains("Forma de Pago")||extractedText.contains("Ingrese el articulo")){
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
-                        PerformWait.wait(2),
+                        PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_S)
                 );
-            } else if (extractedText.contains("nde")||extractedText.contains("seso")||extractedText.contains("Forma de Pago")) {
+            } else if (extractedText.contains("nde")||extractedText.contains("seso")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_S),
-                        PerformWait.wait(2)
-                );
-            } else if (extractedText.contains("Ingrese el articulo")) {
-                actor.attemptsTo(
-                        PresionarTecla.conCodigo(KeyEvent.VK_F11),
-                        PerformWait.wait(2),
-                        PresionarTecla.conCodigo(KeyEvent.VK_S)
+                        PerformWait.wait(LOW_TIME)
                 );
             } else if (extractedText.contains("Asignado")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_F11),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_S)
                 );
             } else if (extractedText.contains("Confirma la venta")) {
                 actor.attemptsTo(
                         PresionarTecla.conCodigo(KeyEvent.VK_S),
-                        PerformWait.wait(2),
+                        PerformWait.wait(LOW_TIME),
                         PresionarTecla.conCodigo(KeyEvent.VK_ENTER)
                 );
             } else if (extractedText.contains("Datos del cliente")) {
@@ -86,6 +83,13 @@ public class GoToStart implements Task {
                 );
             } else{
                 actor.attemptsTo(
+                        PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PresionarTecla.conCodigo(KeyEvent.VK_ESCAPE),
+                        PerformWait.wait(LOW_TIME),
+                        PresionarTecla.conCodigo(KeyEvent.VK_F11),
+                        PerformWait.wait(LOW_TIME),
+                        PresionarTecla.conCodigo(KeyEvent.VK_S),
                         CloseWindowWithAltF4.close(),
                         Click.on(GeoPosWindow.LOCAL_POS),
                         Enter.theValue(Keys.DOWN).into(GeoPosWindow.LOCAL_POS),
