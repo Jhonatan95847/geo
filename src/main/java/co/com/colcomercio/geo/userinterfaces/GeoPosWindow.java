@@ -1,6 +1,8 @@
 package co.com.colcomercio.geo.userinterfaces;
 
 
+import co.com.colcomercio.geo.models.vnc.Vnc;
+import co.com.colcomercio.geo.utils.GetDataModel;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.PageObject;
@@ -8,8 +10,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class GeoPosWindow extends PageObject {
-
-
 
     public static Target LOCAL_POS = initLocalPos();
 

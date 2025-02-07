@@ -9,4 +9,5 @@ import lombok.Setter;
 public class DataVnc {
     private String host;
     private String password;
+    private String nameWindow;
 }

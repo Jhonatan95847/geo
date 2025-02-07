@@ -1,8 +1,11 @@
 [
   {
-    "key" : "garantia_extendida",
+    "key" : "dos",
     "dataProductList": {
-      "productId" : "Celular SAMSUNG Galaxy S21 FE 256GB Gris"
+      "productId" : [
+        "7701023185240",
+        "7707172232774"
+      ]
     }
   },
   {

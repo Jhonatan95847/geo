@@ -29,9 +29,7 @@ public class OpenGeoPos implements Task {
 
         GeoPosWindow.updateLocalPos();
         actor.attemptsTo(
-                CleanRegister.deleteTheSessions(),
-                SwitchToWindow.withTitle("pos@alk33-03qa1 "),
-                WaitUntil.the(GeoPosWindow.LOCAL_POS, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
+                //WaitUntil.the(GeoPosWindow.LOCAL_POS, WebElementStateMatchers.isEnabled()).forNoMoreThan(10).seconds(),
                 PerformWait.wait(3)
         );
     }

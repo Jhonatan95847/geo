@@ -1,0 +1,122 @@
+[
+  {
+    "key" : "CC",
+    "dataNewUsers": {
+      "name" : "Automationcc",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "NIT",
+    "dataNewUsers": {
+      "name" : "Automationnit",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "Juridico Extranjero",
+    "dataNewUsers": {
+      "name" : "Automationje",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "RUT",
+    "dataNewUsers": {
+      "name" : "Automationrut",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "TI",
+    "dataNewUsers": {
+      "name" : "Automationti",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "NIUP",
+    "dataNewUsers": {
+      "name" : "Automationniup",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "CE",
+    "dataNewUsers": {
+      "name" : "Automationce",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "PAS",
+    "dataNewUsers": {
+      "name" : "Automationpas",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "PEP",
+    "dataNewUsers": {
+      "name" : "Automationpep",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "DE",
+    "dataNewUsers": {
+      "name" : "Automationde",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "NITPN",
+    "dataNewUsers": {
+      "name" : "Automationnitpn",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  },
+  {
+    "key" : "PPT",
+    "dataNewUsers": {
+      "name" : "Automationppt",
+      "subname" : "testing",
+      "address" : "calle 13 no 15 45",
+      "phone" : "7456798",
+      "cellphone" : "3207456798"
+    }
+  }
+]

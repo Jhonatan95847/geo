@@ -1,9 +1,10 @@
 [
   {
-    "key" : "vnc_119",
+    "key" : "caja_183",
     "dataVnc": {
-      "host" : "10.181.5.119",
-      "password" : "123456"
+      "host" : "10.181.11.183",
+      "password" : "123456",
+      "nameWindow" : "pos@alk33-03qa1 "
     }
   }
 ]

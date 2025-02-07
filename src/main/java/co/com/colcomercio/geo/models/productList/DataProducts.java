@@ -3,10 +3,12 @@ package co.com.colcomercio.geo.models.productList;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 
 public class DataProducts {
-    private String productId;
+    private List<String> productId;
 }
 

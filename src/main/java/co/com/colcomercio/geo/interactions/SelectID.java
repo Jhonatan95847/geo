@@ -68,7 +68,7 @@ public class SelectID implements Interaction {
                         EscribirTextoConTeclado.elTexto("10")
                 );
                 break;
-            case "NIT PN":
+            case "NITPN":
                 actor.attemptsTo(
                         EscribirTextoConTeclado.elTexto("11")
                 );

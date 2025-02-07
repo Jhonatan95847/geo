@@ -8,5 +8,5 @@ import lombok.Setter;
 @Data
 public class Vnc {
     private String key;
-    private DataVnc dataNewUsers;
+    private DataVnc dataVnc;
 }

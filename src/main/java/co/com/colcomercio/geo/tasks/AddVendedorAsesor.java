@@ -36,8 +36,6 @@ public class AddVendedorAsesor implements Task {
         } else if (convenio.equals("NA")) {
             actor.attemptsTo(
                     EscribirTextoConTeclado.elTexto("s")
-                    //ValidateTextOnScreen.contains("Seleccione un Convenio"),
-                    //PresionarTecla.conCodigo(KeyEvent.VK_ASTERISK)
             );
         }
         actor.wasAbleTo(

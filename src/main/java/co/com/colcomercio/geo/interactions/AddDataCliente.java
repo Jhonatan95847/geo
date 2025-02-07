@@ -1,5 +1,6 @@
 package co.com.colcomercio.geo.interactions;
 
+import co.com.colcomercio.geo.models.newUsers.NewUsers;
 import co.com.colcomercio.geo.models.users.Users;
 import co.com.colcomercio.geo.tasks.ValidateTextOnScreen;
 import net.serenitybdd.screenplay.Actor;
@@ -15,10 +16,12 @@ import static co.com.colcomercio.geo.utils.WaitingTime.MEDIUM_TIME;
 public class AddDataCliente implements Interaction {
     private final String cliente;
     private final Users dataUsers;
+    private final NewUsers dataNewUsers;
     String username = DataGeneratorDate();
-    public AddDataCliente(String cliente, Users dataUsers) {
+    public AddDataCliente(String cliente, Users dataUsers, NewUsers dataNewUsers) {
         this.cliente = cliente;
         this.dataUsers = dataUsers;
+        this.dataNewUsers = dataNewUsers;
     }
 
     @Override
@@ -27,9 +30,6 @@ public class AddDataCliente implements Interaction {
             actor.attemptsTo(
                     EscribirTextoConTeclado.elTexto(dataUsers.getDataUsers().getIdUser()),
                     PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                    //ValidateTextOnScreen.contains("Reg"),
-                    //PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                    //PerformWait.wait(4),
                     ValidateTextOnScreen.contains("Cliente con"),
                     PresionarTecla.conCodigo(KeyEvent.VK_F9),
                     PerformWait.wait(LOW_TIME)
@@ -114,7 +114,7 @@ public class AddDataCliente implements Interaction {
             );
         }
     }
-    public static AddDataCliente agregate(String cliente, Users users){
-        return Tasks.instrumented(AddDataCliente.class, cliente, users);
+    public static AddDataCliente agregate(String cliente, Users users, NewUsers newUsers){
+        return Tasks.instrumented(AddDataCliente.class, cliente, users, newUsers);
     }
 }
