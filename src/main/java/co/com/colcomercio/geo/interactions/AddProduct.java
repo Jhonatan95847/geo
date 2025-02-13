@@ -22,13 +22,6 @@ public class AddProduct implements Interaction {
         actor.attemptsTo(
                 ValidateTextOnScreen.contains("articulo"),
                 EnterEan.enterTheEanIntoCash(dataProduct),
-                /*EscribirTextoConTeclado.elTexto("8806098432516"),
-                PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                EscribirTextoConTeclado.elTexto("7701023185240"),
-                PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                EscribirTextoConTeclado.elTexto("7707611662261"),
-                PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
-                EscribirTextoConTeclado.elTexto("7705946297516"),*/
                 PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
                 PerformWait.wait(2),
                 //ValidateTextOnScreen.contains("Registrados 4"),

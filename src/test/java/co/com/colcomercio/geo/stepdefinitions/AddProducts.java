@@ -7,12 +7,11 @@ import io.cucumber.java.es.Dado;
 import net.serenitybdd.screenplay.Actor;
 
 public class AddProducts {
-    private ProductList dataProducts;
     private final Actor actorWindows = Actor.named("Actor windows") ;
     @Dado("agrega {string} productos de tipo {string}")
-    public void     agregaProductosDeTipo(String n,String producto) {
+    public void agregaProductosDeTipo(String n,String producto) {
 
-        dataProducts = GetDataModel.productList(producto);
+        ProductList dataProducts = GetDataModel.productList(producto);
 
             actorWindows.wasAbleTo(
                     AddProduct.agregate(dataProducts)

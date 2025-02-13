@@ -1,101 +1,39 @@
 [
   {
-    "key" : "dos",
+    "key" : "38",
     "dataProductList": {
       "productId" : [
-        "7701023185240",
-        "7707172232774"
+        "7701023185240", "7707172232774", "7701023185288", "7705946297516", "7707611662261", "7702887021651",
+        "7703044251607", "7701023185240", "7707172232774", "7701023185288", "7705946297516", "7707611662261", "7702887021651",
+        "7703044251607", "7701023185240", "7707172232774", "7701023185288", "7705946297516", "7707611662261", "7702887021651",
+        "7703044251607", "7701023185240", "7707172232774", "7701023185288", "7705946297516", "7707611662261", "7702887021651",
+        "7703044251607", "7701023185240", "7707172232774", "7701023185288", "7705946297516", "7707611662261", "7702887021651",
+        "7703044251607"
       ]
     }
   },
   {
-    "key" : "promocion_precio_fijo",
+    "key" : "dos",
     "dataProductList": {
-      "productId" : "Parlante KALLEY K-BSK15W 15W Negro"
+      "productId" : [
+        "7701023185240"
+      ]
     }
   },
   {
-    "key" : "promocion_porcentaje",
+    "key" : "tres",
     "dataProductList": {
-      "productId" : "Parlante Portátil KALLEY Bluetooth Radio FM Puerto USB MicroSD K-GP4WA 4W Azul"
+      "productId" : [
+        "7701023185240", "7707172232774", "7701023185288"
+      ]
     }
   },
   {
-    "key" : "promociones",
+    "key" : "cuatro",
     "dataProductList": {
-      "productId" : "Parlante KALLEY K-BSK15W 15W Negro"
-    }
-  },
-  {
-    "key" : "kasado",
-    "dataProductList": {
-      "productId" : "Consola XBOX Series S + 1 Control Inalámbrico"
-    }
-  },
-  {
-    "key" : "kasado_dos",
-    "dataProductList": {
-      "productId" : "Cargador APPLE MagSafe"
-    }
-  },
-  {
-    "key" : "preventa",
-    "dataProductList": {
-      "productId" : "Bombillo KALLEY Inteligente 8.5 Watts"
-    }
-  },
-  {
-    "key" : "cero_interes",
-    "dataProductList": {
-      "productId" : "iPhone 11 64 GB Blanco"
-    }
-  },
-  {
-    "key" : "cero_interes",
-    "dataProductList": {
-      "productId" : "Celular SAMSUNG Galaxy S21 FE 256GB Gris"
-    }
-  },
-  {
-    "key" : "cantidad_limitada",
-    "dataProductList": {
-      "productId" : "Celular SAMSUNG Galaxy S22+ 256GB 5G NEGRO"
-    }
-  },
-  {
-    "key" : "instalaciones",
-    "dataProductList": {
-      "productId" : "Servicio Instalación Armado Mueble/ Precio Mueble: Mayor a $ 850.001"
-    }
-  },
-  {
-    "key" : "normal",
-    "dataProductList": {
-      "productId" : "Juego PS5 Spider-Man: Miles Morales"
-    }
-  },
-  {
-    "key" : "kombo",
-    "dataProductList": {
-      "productId" : "Kombo IMUSA Wok 25 cm Mango Madera + 2 Sartenes 18 cm y 20 cm Talent"
-    }
-  },
-  {
-    "key" : "llantas",
-    "dataProductList": {
-      "productId" : "Llanta KONTROL 90 90-19 (Orig Del TTR) Tubetype"
-    }
-  },
-  {
-    "key" : "pines",
-    "dataProductList": {
-      "productId" : "Pin Virtual NETFLIX $40.000"
-    }
-  },
-  {
-    "key" : "corbeta",
-    "dataProductList": {
-      "productId" : "TV TCL 55 Pulgadas 139 cm 55P725 4K-UHD LED Plano Smart TV"
+      "productId" : [
+        "7701023185240", "7707172232774", "7701023185288", "7705946297516"
+      ]
     }
   }
 ]

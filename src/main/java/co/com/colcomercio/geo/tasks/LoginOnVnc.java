@@ -1,6 +1,7 @@
 package co.com.colcomercio.geo.tasks;
 
 import co.com.colcomercio.geo.interactions.CleanRegister;
+import co.com.colcomercio.geo.interactions.PerformWait;
 import co.com.colcomercio.geo.interactions.SwitchToWindow;
 import co.com.colcomercio.geo.interactions.SwitchWindow;
 import co.com.colcomercio.geo.models.vnc.Vnc;
@@ -15,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 
 import static co.com.colcomercio.geo.userinterfaces.VncWindow.*;
+import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
 
 public class LoginOnVnc implements Task {
 
@@ -26,10 +28,12 @@ public class LoginOnVnc implements Task {
         dataVnc = GetDataModel.vnc("caja_183");
         logger.info("##################################Abriendo VNC");
         actor.attemptsTo(
+                PerformWait.wait(LOW_TIME),
                 Enter.theValue(dataVnc.getDataVnc().getHost()).into(EDIT_BAR),
                 Click.on(AUTOSCALE),
                 Click.on(CONECT),
                 SwitchWindow.switchTheWindow("Root","VNC Authentication   "+dataVnc.getDataVnc().getHost()+":5900"),
+                PerformWait.wait(LOW_TIME),
                 Click.on(PASSWORD),
                 Enter.theValue(dataVnc.getDataVnc().getPassword()).into(PASSWORD).thenHit(Keys.ENTER),
                 CleanRegister.deleteTheSessions(),

@@ -27,11 +27,9 @@ public class Login {
         Users dataUsers = GetDataModel.users(id);
         NewUsers dataNewUsers = GetDataModel.Newusers(id);
 
-
         actorWindows.wasAbleTo(
                 OpenWindowsDriver.openTheApp(VNC_PATH),
                 LoginOnVnc.loginOnVnc(),
-                OpenGeoPos.open(),
                 GoToStart.go(),
                 AddCliente.agregate(cliente,id, dataUsers, dataNewUsers),
                 ConsultarBaseDeDatos.conParametros(
@@ -57,7 +55,7 @@ public class Login {
 
         System.out.println("Nuevo ticket incrementado: " + nuevoTicketIdStr);
         actorWindows.wasAbleTo(
-                PerformWait.wait(10),
+                PerformWait.wait(15),
                 ConsultarBaseDeDatos.conParametros(
                         "10.181.11.114",     // Host
                         "gpossrv",        // Base de datos o schema
@@ -65,7 +63,8 @@ public class Login {
                         "ACNG30p0s$",  // Contraseña
                         "SELECT TICKETNUMBER FROM Geopos.tickets WHERE POS = '03'AND LOCALID = '33' AND TICKETNUMBER = '"+nuevoTicketIdStr+"'",
                         "ticket_nuevo"// Consulta SQL
-                )
+                ),
+                CloseVNC.closeVNCProcess()
         );
     }
 
