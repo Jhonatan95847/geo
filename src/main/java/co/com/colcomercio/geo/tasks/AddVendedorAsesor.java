@@ -32,7 +32,8 @@ public class AddVendedorAsesor implements Task {
             );
         } else if (convenio.equals("NA")) {
             actor.attemptsTo(
-                    EscribirTextoConTeclado.elTexto("s")
+                    ValidateTextOnScreen.contains("Seleccione")
+                    //EscribirTextoConTeclado.elTexto("s")
             );
         }
         actor.wasAbleTo(

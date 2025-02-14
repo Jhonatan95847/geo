@@ -32,7 +32,7 @@ public class AddDataCliente implements Interaction {
                     PresionarTecla.conCodigo(KeyEvent.VK_ENTER),
                     ValidateTextOnScreen.contains("Cliente con"),
                     PresionarTecla.conCodigo(KeyEvent.VK_F9),
-                    PerformWait.wait(LOW_TIME)
+                    PerformWait.wait(MEDIUM_TIME)
             );
         } else if (cliente.equals("nuevo")){
             actor.attemptsTo(

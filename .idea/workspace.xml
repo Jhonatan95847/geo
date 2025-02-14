@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f8511e-059a-4348-bab1-2b5b85360450" name="Changes" comment="Data desde json y lista de productos">
+    <list default="true" id="f6f8511e-059a-4348-bab1-2b5b85360450" name="Changes" comment="Ajustes para cambiar cajas con key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/GoToStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/GoToStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/AddDataCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/AddDataCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/AddVendedorAsesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/AddVendedorAsesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/LoginOnVnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/LoginOnVnc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/ValidateTextOnScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/ValidateTextOnScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/vnc.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/vnc.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738965838164</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajustes para cambiar cajas con key">
+      <option name="closed" value="true" />
+      <created>1739539379220</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739539379220</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -183,6 +188,7 @@
     <MESSAGE value="ajuestes metodo de pago add clientes, ajustes tiempos, consulta sql, reintentos al validar el texto" />
     <MESSAGE value="Validacion de factura en central" />
     <MESSAGE value="Data desde json y lista de productos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data desde json y lista de productos" />
+    <MESSAGE value="Ajustes para cambiar cajas con key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes para cambiar cajas con key" />
   </component>
 </project>
