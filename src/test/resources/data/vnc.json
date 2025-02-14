@@ -6,5 +6,13 @@
       "password" : "123456",
       "nameWindow" : "pos@alk33-03qa1 "
     }
+  },
+  {
+    "key" : "caja_185",
+    "dataVnc": {
+      "host" : "10.181.11.185",
+      "password" : "123456",
+      "nameWindow" : "pos@akb68-12 "
+    }
   }
 ]

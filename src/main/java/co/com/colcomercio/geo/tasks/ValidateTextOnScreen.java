@@ -1,6 +1,8 @@
 package co.com.colcomercio.geo.tasks;
 
 import co.com.colcomercio.geo.interactions.PerformWait;
+import co.com.colcomercio.geo.models.vnc.Vnc;
+import co.com.colcomercio.geo.utils.GetDataModel;
 import co.com.colcomercio.geo.utils.ScreenCapture;
 import co.com.colcomercio.geo.utils.OCRProcessor;
 import net.serenitybdd.screenplay.Actor;
@@ -10,6 +12,7 @@ import net.serenitybdd.screenplay.Tasks;
 import java.io.File;
 
 public class ValidateTextOnScreen implements Task {
+
     private final String expectedText;
     private static final int MAX_ATTEMPTS = 5; // Número máximo de intentos
     private static final int WAIT_TIME = 2; // Tiempo de espera en segundos entre intentos
@@ -24,14 +27,15 @@ public class ValidateTextOnScreen implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        Vnc dataVnc;
+        dataVnc = GetDataModel.vnc("caja_185");
         int attempt = 0;
         boolean found = false;
 
         while (attempt < MAX_ATTEMPTS && !found) {
             try {
                 // Captura de pantalla
-                File screenshot = ScreenCapture.captureWindow("pos@alk33-03qa1 ", "screenshot.png");
-                //actor.attemptsTo(PerformWait.wait(WAIT_TIME));
+                File screenshot = ScreenCapture.captureWindow(dataVnc.getDataVnc().getNameWindow(), "screenshot.png");
 
                 // Procesamiento con OCR
                 String extractedText = OCRProcessor.extractTextFromImage(screenshot);

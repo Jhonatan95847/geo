@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f8511e-059a-4348-bab1-2b5b85360450" name="Changes" comment="Data desde json y lista de productos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/PayCash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/PayCredibanco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/PayRedeban.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectDonacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectFranquicia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectPayMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/CloseVNC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/ComfirmAndPrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/SelectID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/GoToStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/interactions/GoToStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/AddVendedorAsesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/AddVendedorAsesor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/LoginOnVnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/LoginOnVnc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/utils/GetDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/utils/GetDataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/AddProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/AddProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/PayProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/colcomercio/geo/stepdefinitions/PayProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/newUsers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/newUsers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/productList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/productList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/ValidateTextOnScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/colcomercio/geo/tasks/ValidateTextOnScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/vnc.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/vnc.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,18 +61,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.GeoRunner.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1049644474/Documents/Automatizacion/geo/GeoPos%20Automatizaci%C3%B3n%20QA/GeoPosAutomation",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.GeoRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1049644474/Documents/Automatizacion/geo/GeoPos%20Automatizaci%C3%B3n%20QA/GeoPosAutomation&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1049644474\Documents\Automatizacion\Baseautomatizacion\corbemovil\geo\geo-testin\src\test\resources\drivers" />

@@ -1,6 +1,5 @@
 package co.com.colcomercio.geo.tasks;
 
-import co.com.colcomercio.geo.interactions.CleanRegister;
 import co.com.colcomercio.geo.interactions.PerformWait;
 import co.com.colcomercio.geo.interactions.SwitchToWindow;
 import co.com.colcomercio.geo.interactions.SwitchWindow;
@@ -20,12 +19,13 @@ import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
 
 public class LoginOnVnc implements Task {
 
-    private Vnc dataVnc;
+
 
     private static final Logger logger = LogManager.getLogger(LoginOnVnc.class);
     @Override
     public <T extends Actor> void performAs(T actor) {
-        dataVnc = GetDataModel.vnc("caja_183");
+        Vnc dataVnc;
+        dataVnc = GetDataModel.vnc("caja_185");
         logger.info("##################################Abriendo VNC");
         actor.attemptsTo(
                 PerformWait.wait(LOW_TIME),
@@ -36,7 +36,7 @@ public class LoginOnVnc implements Task {
                 PerformWait.wait(LOW_TIME),
                 Click.on(PASSWORD),
                 Enter.theValue(dataVnc.getDataVnc().getPassword()).into(PASSWORD).thenHit(Keys.ENTER),
-                CleanRegister.deleteTheSessions(),
+                //CleanRegister.deleteTheSessions(),
                 SwitchToWindow.withTitle(dataVnc.getDataVnc().getNameWindow())
         );
     }

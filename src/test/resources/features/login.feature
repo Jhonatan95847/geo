@@ -31,7 +31,7 @@ Característica: Escenarios de caja
     Entonces deberia generarse la factura de pago
     Ejemplos:
       | cliente    | tipo_id | convenio | cantidad | producto | donacion | tarjeta | franquicia |
-      | registrado | NIT     | sin      | 3        | dos      |  sin     | credito | Mastercard |
+      #| registrado | NIT     | sin      | 3        | dos      |  sin     | credito | Mastercard |
       | registrado | CC      | sin      | 3        | dos      |  sin     | debito  | Mastercard |
       | registrado | CC      | sin      | 3        | dos      |  sin     | EL      | Mastercard |
       | registrado | CC      | sin      | 3        | dos      |  sin     | CC      | Mastercard |

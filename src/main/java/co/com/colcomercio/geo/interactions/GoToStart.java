@@ -1,8 +1,10 @@
 package co.com.colcomercio.geo.interactions;
 
 
+import co.com.colcomercio.geo.models.vnc.Vnc;
 import co.com.colcomercio.geo.tasks.LoginGeo;
 import co.com.colcomercio.geo.userinterfaces.GeoPosWindow;
+import co.com.colcomercio.geo.utils.GetDataModel;
 import co.com.colcomercio.geo.utils.ScreenCapture;
 import co.com.colcomercio.geo.utils.OCRProcessor;
 import net.serenitybdd.screenplay.Actor;
@@ -19,16 +21,17 @@ import static co.com.colcomercio.geo.utils.WaitingTime.LOW_TIME;
 
 public class GoToStart implements Task {
 
-
     public static GoToStart go() {
         return Tasks.instrumented(GoToStart.class);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        Vnc dataVnc;
+        dataVnc = GetDataModel.vnc("caja_185");
         try {
             // Captura de pantalla
-            File screenshot = ScreenCapture.captureWindow("pos@alk33-03qa1 ","screenshot.png");
+            File screenshot = ScreenCapture.captureWindow(dataVnc.getDataVnc().getNameWindow(),"screenshot.png");
 
             // Procesamiento con OCR
             String extractedText = OCRProcessor.extractTextFromImage(screenshot);
